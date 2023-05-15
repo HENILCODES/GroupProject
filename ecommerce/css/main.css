@@ -3386,7 +3386,7 @@ tbody tr td:last-child {
   padding: 8px 0px;
   background: var(--primary);
 }
-.header-top-welcome p {
+.header-top-welcome marquee {
   font-size: 14px;
   color: var(--white);
   letter-spacing: 0.3px;
@@ -3464,10 +3464,6 @@ tbody tr td:last-child {
   color: var(--green-chalk);
 }
 @media (max-width: 767px) {
-  .header-top-welcome,
-  .header-top-list {
-    display: none;
-  }
   .header-top-select {
     width: 270px;
     margin: 0px auto;
