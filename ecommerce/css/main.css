@@ -1,4 +1,4 @@
-@import url("../../../../../fonts.googleapis.com/css2053d.css?family=Rubik:wght@300;400;500;600;700;800;900&amp;display=swap");
+/* @import url("../../../../../fonts.googleapis.com/css2053d.css?family=Rubik:wght@300;400;500;600;700;800;900&amp;display=swap"); */
 :root {
   --h1size: 50px;
   --h2size: 40px;
@@ -1450,6 +1450,11 @@ tbody tr td:last-child {
   font-weight: 500;
   text-transform: capitalize;
 }
+@media (max-width: 900px) {
+  .countdown-time span {
+    font-size: 22px;
+  }
+}
 @media (max-width: 575px) {
   .countdown-time {
     padding: 0px 12px;
@@ -1461,7 +1466,7 @@ tbody tr td:last-child {
     padding-right: 0px;
   }
   .countdown-time span {
-    font-size: 35px;
+    font-size: 19px;
   }
   .countdown-time small {
     font-size: 16px;
