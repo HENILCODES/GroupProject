@@ -110,3 +110,47 @@ $(window).on("scroll", function () {
     $(".payment-card.payment").removeClass("active"),
       $(this).addClass("active");
   });
+
+/* <-------------------------------------- Special Discount ---------------------------------------> */
+
+function makeTimer() {
+  var endTime = new Date("May 31, 2023 23:59:59 GMT+00:00"); // Set your desired end date and time
+  var now = new Date();
+  var timeLeft = endTime - now;
+
+  if (timeLeft < 0) {
+    // If the countdown has ended
+    clearInterval(timer);
+    $("#timer").html("<span class='countdown-time'>Countdown ended</span>");
+    return;
+  }
+
+  var days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+  if (days < 10) {
+    days = "0" + days;
+  }
+  if (hours < 10) {
+    hours = "0" + hours;
+  }
+  if (minutes < 10) {
+    minutes = "0" + minutes;
+  }
+  if (seconds < 10) {
+    seconds = "0" + seconds;
+  }
+
+  $("#days").html(days + "<span>Days</span>");
+  $("#hours").html(hours + "<span>Hours</span>");
+  $("#minutes").html(minutes + "<span>Minutes</span>");
+  $("#seconds").html(seconds + "<span>Seconds</span>");
+}
+
+makeTimer(); // Call the function once initially to avoid delay in displaying the countdown
+
+var timer = setInterval(function () {
+  makeTimer();
+}, 1000);

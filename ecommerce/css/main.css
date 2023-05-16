@@ -3973,10 +3973,8 @@ tbody tr td:last-child {
 }
 .nav-btn {
   width: 100%;
-  padding: 50px 0px;
   margin-bottom: 20px;
   text-align: center;
-  background: var(--chalk);
 }
 .nav-btn .btn {
   font-size: 14px;
