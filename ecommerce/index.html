@@ -55,19 +55,18 @@
             ><img src="images/logo.png" alt="logo"
           /></a>
           <form class="header-form">
-            <input type="text" placeholder="Search anything..." /><button>
-              <i class="fas fa-search"></i>
-            </button>
+            <input type="text" placeholder="Search anything..."/>
+            <button><i class="fas fa-search"></i></button>
           </form>
           <div class="header-widget-group">
-            <a href="login.html" class="header-widget" title="My Account"
-              ><img src="images/user.png" alt="user" /><span>join</span></a
-            >
-            <a href="wishlist.html" class="header-widget" title="Wishlist"
-              ><i class="fas fa-heart"></i><sup>0</sup></a
-            ><button class="header-widget header-cart" title="Cartlist">
-              <i class="fas fa-shopping-basket"></i>
+            <a href="wishlist.html" class="header-widget" title="Wishlist"><i class="fas fa-heart"></i><sup>6</sup></a>
+            <button class="header-widget header-cart" title="Cartlist">
+              <i class="fas fa-shopping-basket"><sup>4</sup></i>
             </button>
+            <!-- <a href="wishlist.html" class="header-widget" title="Wishlist"><i class="icofont-fast-delivery fs-3"></i><sup>6</sup></a> -->
+
+            <!-- <a href="login.html" class="header-widget" title="My Account"
+              ><img src="images/user.png" alt="user" /><span>join</span></a> -->
           </div>
         </div>
       </div>
@@ -90,16 +89,30 @@
                 <li class="navbar-item dropdown">
                   <a class="navbar-link" href="contact.html">Contact Us</a>
                 </li>
+                <li class="navbar-item dropdown">
+                  <a class="navbar-link" href="contact.html">help</a>
+                </li>
               </ul>
               <div class="navbar-info-group">
-                <div class="navbar-info">
+                <!-- <div class="navbar-info">
                   <i class="icofont-ui-touch-phone"></i>
                   <p><small>call us</small><span>(+880) 183 8288 389</span></p>
                 </div>
                 <div class="navbar-info">
                   <i class="icofont-ui-email"></i>
                   <p><small>email us</small><span>support@example.com</span></p>
-                </div>
+                </div> -->
+                <ul class="navbar-list">
+                  <li class="navbar-item dropdown">
+                    <a href="login.html" class="header-widget navbar-link dropdown-arrow"><img src="images/user.png" alt="user" /></a>
+                    <ul class="dropdown-position-list">
+                      <li><a href="profile.html">my profile</a></li>
+                      <li><a href="orderlist.html">order history</a></li>
+                      <li><a href="wallet.html">my wallet</a></li>
+                      <li><a href="faq.html">Log Out</a></li>
+                    </ul>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -1988,10 +2001,17 @@
                 minima
               </p>
               <div class="countdown countdown-clock" id="timer">
-                <span class="countdown-time"><span id="days"></span></span>
-                <span class="countdown-time"><span id="hours"></span></span>
-                <span class="countdown-time"><span id="minutes"></span></span>
-                <span class="countdown-time"><span id="seconds"></span></span>
+                <div class="countdown coming-clock countdown-full-format" data-countdown="2023/5/18">
+                  <!-- <span class="countdown-time"
+                    ><span id="days"></span><small>days</small></span
+                  ><span class="countdown-time"
+                    ><span id="hours"></span><small>hours</small></span
+                  ><span class="countdown-time"
+                    ><span id="minutes"></span><small>minutes</small></span
+                  ><span class="countdown-time"
+                    ><span id="seconds"></span><small>seconds</small></span
+                  > -->
+                </div>
               </div>
               <a href="shop-5column.html" class="btn btn-inline"
                 ><i class="fas fa-shopping-basket"></i><span>shop now</span></a
@@ -4795,13 +4815,13 @@
     >
       <div class="container">
         <div class="row align-items-center">
-          <div class="col-md-5 col-lg-6 col-xl-7">
+          <!-- <div class="col-md-5 col-lg-6 col-xl-7">
             <div class="news-text">
               <h2>Get 20% Discount for Subscriber</h2>
               <p>Lorem ipsum dolor consectetur adipisicing accusantium</p>
             </div>
-          </div>
-          <div class="col-md-7 col-lg-6 col-xl-5">
+          </div> -->
+          <!-- <div class="col-md-7 col-lg-6 col-xl-5">
             <form class="news-form">
               <input
                 type="text"
@@ -4810,7 +4830,7 @@
                 <span><i class="icofont-ui-email"></i>Subscribe</span>
               </button>
             </form>
-          </div>
+          </div> -->
         </div>
       </div>
     </section>
