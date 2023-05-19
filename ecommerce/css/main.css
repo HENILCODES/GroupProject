@@ -288,8 +288,8 @@ button:focus {
   display: none;
   border-radius: 50%;
   background: var(--primary);
-  -webkit-box-shadow: 0px 0px 15px 3px rgba(71, 254, 126, 0.5);
-  box-shadow: 0px 0px 15px 3px rgba(71, 254, 126, 0.5);
+  -webkit-box-shadow: 0px 0px 10px 3px rgba(37, 37, 37, 0.5);
+  box-shadow: 0px 0px 10px 3px rgba(48, 47, 47, 0.5);
   -webkit-animation: mahmud 2s infinite;
   animation: mahmud 2s infinite;
   transition: all linear 0.3s;
@@ -1504,7 +1504,7 @@ tbody tr td:last-child {
   -o-transition: all linear 0.3s;
 }
 .suggest-card:hover::before {
-  background: rgba(17, 151, 68, 0.9);
+  background: #3d87c4b6;
 }
 .suggest-card img {
   width: 100%;
@@ -4455,7 +4455,7 @@ tbody tr td:last-child {
     height: 100vh;
     -webkit-transform: scale(0);
     transform: scale(0);
-    margin: 80px 0px 0px;
+    margin: 50px 0px 0px;
     border-radius: 15px 15px 0px 0px;
     transition: all linear 0.3s;
     -webkit-transition: all linear 0.3s;
@@ -5376,15 +5376,15 @@ tbody tr td:last-child {
   border-radius: 8px 8px 0px 0px;
   background: var(--primary);
   border-top: 1px solid var(--border);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  /* display: -webkit-box; */
+  /* display: -ms-flexbox; */
   -webkit-box-align: center;
   -ms-flex-align: center;
-  align-items: center;
   -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+  /* display: flex; */
+  /* align-items: center; */
+  /* -ms-flex-pack: justify; */
+  /* justify-content: space-between; */
 }
 .footer-copytext {
   font-size: 15px;
