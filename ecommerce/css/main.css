@@ -4143,6 +4143,7 @@ tbody tr td:last-child {
 }
 .nav-footer {
   text-align: center;
+  margin-top: 35px;
 }
 .nav-footer p {
   font-size: 14px;
