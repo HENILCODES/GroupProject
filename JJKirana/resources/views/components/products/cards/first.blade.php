@@ -15,7 +15,7 @@
         </h6>
         <h6 class="product-price">
             <del>₹{{ $price+25 }}</del>
-            <span><b class="fw-bold">₹{{ $price }} </b> <span style="color: rgb(152, 111, 255) !important"> / {{$rateValue}}<sup>{{$rate}}</sup></span>
+            <span><b class="fw-bold">₹{{ $price }} </b> <span style="color: rgb(152, 111, 255) !important"> / {{$rate}}</span>
             </span>
         </h6>
         <button class="product-add" title="Add to Cart">
