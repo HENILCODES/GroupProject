@@ -1,4 +1,8 @@
 /* @import url("../../../../../fonts.googleapis.com/css2053d.css?family=Rubik:wght@300;400;500;600;700;800;900&amp;display=swap"); */
+
+@import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,600);
+
 :root {
   --h1size: 50px;
   --h2size: 40px;
@@ -1357,8 +1361,6 @@ tbody tr td:last-child {
   border: 2px dotted var(--primary);
 }
 
-@import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
-@import url(https://fonts.googleapis.com/css?family=Raleway:400,500,600);
 figure.snip1195 {
   font-family: "Raleway", Arial, sans-serif;
   position: relative;
