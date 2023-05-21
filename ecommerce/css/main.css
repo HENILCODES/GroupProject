@@ -1401,7 +1401,7 @@ figure.snip1195 figcaption {
   color: #000;
   font-size: 1rem;
   font-weight: 500;
-  line-height: 1.6em;
+  line-height: 1.3em;
 }
 
 .product-info {
@@ -1411,7 +1411,7 @@ figure.snip1195 figcaption {
   font-size: 12px;
   border: 2px solid #3d87c4;
   margin: -25px;
-  padding: 5px 0 0 10px;
+  padding: 10px 0 0 10px;
 }
 
 .product-info > div {
