@@ -71,10 +71,6 @@
             <button class="header-widget header-cart" title="Cartlist">
               <i class="fas fa-shopping-basket"><sup>4</sup></i>
             </button>
-            <!-- <a href="wishlist.html" class="header-widget" title="Wishlist"><i class="icofont-fast-delivery fs-3"></i><sup>6</sup></a> -->
-
-            <!-- <a href="login.html" class="header-widget" title="My Account"
-              ><img src="images/user.png" alt="user" /><span>join</span></a> -->
           </div>
         </div>
       </div>
@@ -102,14 +98,6 @@
                 </li>
               </ul>
               <div class="navbar-info-group">
-                <!-- <div class="navbar-info">
-                  <i class="icofont-ui-touch-phone"></i>
-                  <p><small>call us</small><span>(+880) 183 8288 389</span></p>
-                </div>
-                <div class="navbar-info">
-                  <i class="icofont-ui-email"></i>
-                  <p><small>email us</small><span>support@example.com</span></p>
-                </div> -->
                 <ul class="navbar-list">
                   <li class="navbar-item dropdown">
                     <a
@@ -673,299 +661,61 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-12">
-            <div class="table-scroll">
-              <table class="table-list">
-                <thead>
-                  <tr>
-                    <th scope="col">Serial</th>
-                    <th scope="col">Product</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Price</th>
-                    <th scope="col">description</th>
-                    <th scope="col">status</th>
-                    <th scope="col">shopping</th>
-                    <th scope="col">action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="table-serial">
-                      <h6>01</h6>
-                    </td>
-                    <td class="table-image">
-                      <img src="images/product/01.jpg" alt="product" />
-                    </td>
-                    <td class="table-name">
-                      <h6>product name</h6>
-                    </td>
-                    <td class="table-price">
-                      <h6>₹19<small>/kilo</small></h6>
-                    </td>
-                    <td class="table-desc">
-                      <p>
-                        Lorem ipsum nobis eaque excepturi nisi eveniet...<a
-                          href="product-tab.html"
-                          >read more</a
-                        >
-                      </p>
-                    </td>
-                    <td class="table-status">
-                      <h6 class="stock-out">stock out</h6>
-                    </td>
-                    <td class="table-shop">
-                      <button class="product-add" title="Add to Cart">
-                        add to cart
+            <ul class="cart-list">
+              <li class="cart-item">
+                <div class="cart-media">
+                  <a href="#"><img src="images/product/01.jpg" alt="product"></a>
+                  <button class="cart-delete">
+                    <i class="far fa-trash-alt"></i>
+                  </button>
+                </div>
+                <div class="cart-info-group">
+                  <div class="cart-info">
+                    <h6><a href="product-single.html">existing product name</a></h6>
+                    <p>Unit Price - ₹8.75</p>
+                  </div>
+                  <div class="cart-action-group">
+                    <div class="product-action">
+                      <button class="action-minus" title="Quantity Minus">
+                        <i class="icofont-minus"></i>
                       </button>
-                      <div class="product-action">
-                        <button class="action-minus" title="Quantity Minus">
-                          <i class="icofont-minus"></i></button
-                        ><input
-                          class="action-input"
-                          title="Quantity Number"
-                          type="text"
-                          name="quantity"
-                          value="1"
-                        /><button class="action-plus" title="Quantity Plus">
-                          <i class="icofont-plus"></i>
-                        </button>
-                      </div>
-                    </td>
-                    <td class="table-action">
-                      <a
-                        class="view"
-                        href="#"
-                        title="Quick View"
-                        data-bs-toggle="modal"
-                        data-bs-target="#product-view"
-                        ><i class="fas fa-eye"></i></a
-                      ><a class="trash" href="#" title="Remove Wishlist"
-                        ><i class="icofont-trash"></i
-                      ></a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="table-serial">
-                      <h6>02</h6>
-                    </td>
-                    <td class="table-image">
-                      <img src="images/product/02.jpg" alt="product" />
-                    </td>
-                    <td class="table-name">
-                      <h6>product name</h6>
-                    </td>
-                    <td class="table-price">
-                      <h6>₹78<small>/kilo</small></h6>
-                    </td>
-                    <td class="table-desc">
-                      <p>
-                        Lorem ipsum nobis eaque excepturi nisi eveniet...<a
-                          href="product-tab.html"
-                          >read more</a
-                        >
-                      </p>
-                    </td>
-                    <td class="table-status">
-                      <h6 class="stock-in">stock in</h6>
-                    </td>
-                    <td class="table-shop">
-                      <button class="product-add" title="Add to Cart">
-                        add to cart
+                      <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
+                      <button class="action-plus" title="Quantity Plus">
+                        <i class="icofont-plus"></i>
                       </button>
-                      <div class="product-action">
-                        <button class="action-minus" title="Quantity Minus">
-                          <i class="icofont-minus"></i></button
-                        ><input
-                          class="action-input"
-                          title="Quantity Number"
-                          type="text"
-                          name="quantity"
-                          value="1"
-                        /><button class="action-plus" title="Quantity Plus">
-                          <i class="icofont-plus"></i>
-                        </button>
-                      </div>
-                    </td>
-                    <td class="table-action">
-                      <a
-                        class="view"
-                        href="#"
-                        title="Quick View"
-                        data-bs-toggle="modal"
-                        data-bs-target="#product-view"
-                        ><i class="fas fa-eye"></i></a
-                      ><a class="trash" href="#" title="Remove Wishlist"
-                        ><i class="icofont-trash"></i
-                      ></a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="table-serial">
-                      <h6>03</h6>
-                    </td>
-                    <td class="table-image">
-                      <img src="images/product/03.jpg" alt="product" />
-                    </td>
-                    <td class="table-name">
-                      <h6>product name</h6>
-                    </td>
-                    <td class="table-price">
-                      <h6>₹68<small>/kilo</small></h6>
-                    </td>
-                    <td class="table-desc">
-                      <p>
-                        Lorem ipsum nobis eaque excepturi nisi eveniet...<a
-                          href="product-tab.html"
-                          >read more</a
-                        >
-                      </p>
-                    </td>
-                    <td class="table-status">
-                      <h6 class="stock-out">stock out</h6>
-                    </td>
-                    <td class="table-shop">
-                      <button class="product-add" title="Add to Cart">
-                        add to cart
+                    </div>
+                    <h6>₹56.98</h6>
+                  </div>
+                </div>
+              </li>
+              <li class="cart-item">
+                <div class="cart-media">
+                  <a href="#"><img src="images/product/02.jpg" alt="product"></a>
+                  <button class="cart-delete">
+                    <i class="far fa-trash-alt"></i>
+                  </button>
+                </div>
+                <div class="cart-info-group">
+                  <div class="cart-info">
+                    <h6><a href="product-single.html">existing product name</a></h6>
+                    <p>Unit Price - ₹8.75</p>
+                  </div>
+                  <div class="cart-action-group">
+                    <div class="product-action">
+                      <button class="action-minus" title="Quantity Minus">
+                        <i class="icofont-minus"></i>
                       </button>
-                      <div class="product-action">
-                        <button class="action-minus" title="Quantity Minus">
-                          <i class="icofont-minus"></i></button
-                        ><input
-                          class="action-input"
-                          title="Quantity Number"
-                          type="text"
-                          name="quantity"
-                          value="1"
-                        /><button class="action-plus" title="Quantity Plus">
-                          <i class="icofont-plus"></i>
-                        </button>
-                      </div>
-                    </td>
-                    <td class="table-action">
-                      <a
-                        class="view"
-                        href="#"
-                        title="Quick View"
-                        data-bs-toggle="modal"
-                        data-bs-target="#product-view"
-                        ><i class="fas fa-eye"></i></a
-                      ><a class="trash" href="#" title="Remove Wishlist"
-                        ><i class="icofont-trash"></i
-                      ></a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="table-serial">
-                      <h6>04</h6>
-                    </td>
-                    <td class="table-image">
-                      <img src="images/product/04.jpg" alt="product" />
-                    </td>
-                    <td class="table-name">
-                      <h6>product name</h6>
-                    </td>
-                    <td class="table-price">
-                      <h6>₹24<small>/kilo</small></h6>
-                    </td>
-                    <td class="table-desc">
-                      <p>
-                        Lorem ipsum nobis eaque excepturi nisi eveniet...<a
-                          href="product-tab.html"
-                          >read more</a
-                        >
-                      </p>
-                    </td>
-                    <td class="table-status">
-                      <h6 class="stock-in">stock in</h6>
-                    </td>
-                    <td class="table-shop">
-                      <button class="product-add" title="Add to Cart">
-                        add to cart
+                      <input class="action-input" title="Quantity Number" type="text" name="quantity" value="1">
+                      <button class="action-plus" title="Quantity Plus">
+                        <i class="icofont-plus"></i>
                       </button>
-                      <div class="product-action">
-                        <button class="action-minus" title="Quantity Minus">
-                          <i class="icofont-minus"></i></button
-                        ><input
-                          class="action-input"
-                          title="Quantity Number"
-                          type="text"
-                          name="quantity"
-                          value="1"
-                        /><button class="action-plus" title="Quantity Plus">
-                          <i class="icofont-plus"></i>
-                        </button>
-                      </div>
-                    </td>
-                    <td class="table-action">
-                      <a
-                        class="view"
-                        href="#"
-                        title="Quick View"
-                        data-bs-toggle="modal"
-                        data-bs-target="#product-view"
-                        ><i class="fas fa-eye"></i></a
-                      ><a class="trash" href="#" title="Remove Wishlist"
-                        ><i class="icofont-trash"></i
-                      ></a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td class="table-serial">
-                      <h6>05</h6>
-                    </td>
-                    <td class="table-image">
-                      <img src="images/product/05.jpg" alt="product" />
-                    </td>
-                    <td class="table-name">
-                      <h6>product name</h6>
-                    </td>
-                    <td class="table-price">
-                      <h6>₹34<small>/kilo</small></h6>
-                    </td>
-                    <td class="table-desc">
-                      <p>
-                        Lorem ipsum nobis eaque excepturi nisi eveniet...<a
-                          href="product-tab.html"
-                          >read more</a
-                        >
-                      </p>
-                    </td>
-                    <td class="table-status">
-                      <h6 class="stock-out">stock out</h6>
-                    </td>
-                    <td class="table-shop">
-                      <button class="product-add" title="Add to Cart">
-                        add to cart
-                      </button>
-                      <div class="product-action">
-                        <button class="action-minus" title="Quantity Minus">
-                          <i class="icofont-minus"></i></button
-                        ><input
-                          class="action-input"
-                          title="Quantity Number"
-                          type="text"
-                          name="quantity"
-                          value="1"
-                        /><button class="action-plus" title="Quantity Plus">
-                          <i class="icofont-plus"></i>
-                        </button>
-                      </div>
-                    </td>
-                    <td class="table-action">
-                      <a
-                        class="view"
-                        href="#"
-                        title="Quick View"
-                        data-bs-toggle="modal"
-                        data-bs-target="#product-view"
-                        ><i class="fas fa-eye"></i></a
-                      ><a class="trash" href="#" title="Remove Wishlist"
-                        ><i class="icofont-trash"></i
-                      ></a>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+                    </div>
+                    <h6>₹56.98</h6>
+                  </div>
+                </div>
+              </li>
+              <!-- Repeat the above list item for each wishlist item -->
+            </ul>   
           </div>
         </div>
         <div class="row">
