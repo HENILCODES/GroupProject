@@ -34,6 +34,6 @@ class HomeController extends Controller
         // $new = $products->where('products.badge','new')->get()->toArray();
         // $sale = $products->where('products.badge','sale')->get()->toArray();
         // dd($feature);
-        return view('home',compact('categorys','brands','products'));
+        return view('index',compact('categorys','brands','products'));
     }
 }

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-    - Home
+    JJKirana - Home
 @endsection
 @section('head')
     <link rel="stylesheet" href="{{ asset('css/home.css') }}" />
