@@ -39,10 +39,14 @@ class ProductController extends Controller
      */
     public function show(string $id)
     {
-        $product = Product::find($id)->toArray();
-        $brand = getByBrandId($product['brand_id']);
-        $tags = Tag::where('product_id',$id)->get()->first();
-        return view('product-single',compact('product','brand','tags'));
+        $product = Product::where('id', $id)->get()->toArray();
+        if ($product) {
+            $brand = getByBrandId($product['brand_id']);
+            $tags = Tag::where('product_id', $id)->get()->first();
+            return view('product-single', compact('product', 'brand', 'tags'));
+        } else {
+            return redirect()->route('404');
+        }
     }
 
     /**

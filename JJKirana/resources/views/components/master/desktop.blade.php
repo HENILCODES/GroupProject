@@ -50,19 +50,19 @@
                 <div class="navbar-content">
                     <ul class="navbar-list">
                         <li class="navbar-item dropdown">
-                            <a class="navbar-link" href="{{route("home")}}">home</a>
+                            <a class="navbar-link" href="{{ route('home') }}">home</a>
                         </li>
                         <li class="navbar-item dropdown">
-                            <a class="navbar-link" href="about.html">About Us</a>
+                            <a class="navbar-link" href="{{ route('aboutus') }}">About Us</a>
                         </li>
                         <li class="navbar-item">
-                            <a class="navbar-link" href="{{route("categorys.index")}}">categorys</a>
+                            <a class="navbar-link" href="{{ route('categorys.index') }}">categorys</a>
                         </li>
                         <li class="navbar-item">
-                            <a class="navbar-link" href="{{route('brands.index')}}">Brands</a>
+                            <a class="navbar-link" href="{{ route('brands.index') }}">Brands</a>
                         </li>
                         <li class="navbar-item dropdown">
-                            <a class="navbar-link" href="contact.html">Contact Us</a>
+                            <a class="navbar-link" href="{{ route('contactus') }}">Contact Us</a>
                         </li>
                         <li class="navbar-item dropdown">
                             <a class="navbar-link" href="contact.html">help</a>
@@ -75,7 +75,7 @@
                                         src="{{ asset('storage/images/user.png') }}" alt="user" /></span>
                                 <ul class="dropdown-position-list">
                                     <li><a href="profile.html">my profile</a></li>
-                                    <li><a href="orderlist.html">order history</a></li>
+                                    <li><a href="{{route('orderlist')}}">order history</a></li>
                                     <li><a href="wallet.html">my wallet</a></li>
                                     @auth
                                         <li>
