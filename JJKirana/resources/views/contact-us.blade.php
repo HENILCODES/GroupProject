@@ -23,7 +23,7 @@
                     <div class="contact-card">
                         <i class="icofont-location-pin"></i>
                         <h4>head office</h4>
-                        <p>Ashirwad Socitey Ground Floor Gunajn Vapi</p>
+                        <p>{{$details->address}}</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-4">
@@ -31,7 +31,7 @@
                         <i class="icofont-phone"></i>
                         <h4>phone number</h4>
                         <p>
-                            <a href="#">009-215-5596 <span>(toll free)</span></a><a href="#">009-215-5595</a>
+                            <a href="tel:+91{{$details->contact}}">{{$details->contact}}</a>
                         </p>
                     </div>
                 </div>
@@ -40,7 +40,7 @@
                         <i class="icofont-email"></i>
                         <h4>Support mail</h4>
                         <p>
-                            <a href="#">contact@example.com</a><a href="#">info@example.com</a>
+                            <a href="mailto:{{$details->email}}">{{$details->email}}</a>
                         </p>
                     </div>
                 </div>
@@ -49,7 +49,7 @@
                 <div class="col-lg-6">
                     <div class="contact-map">
                         <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d685.6736435822922!2d72.92666563195735!3d20.379083617564568!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be0cff27d31db7d%3A0xcb1f972ff953df8b!2sJAY%20JAGDAMBA%20KIRANA%20STORE%20(%20J%20J%20KIRANA%20STORE%20)!5e0!3m2!1sen!2sin!4v1684209770972!5m2!1sen!2sin"
+                            src="{{$details->map}}"
                             width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"
                             referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>

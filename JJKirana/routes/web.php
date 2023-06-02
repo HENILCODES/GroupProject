@@ -4,6 +4,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\SettingController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 
@@ -26,9 +27,7 @@ Auth::routes();
 Route::get("about-us", function () {
     return view("about");
 })->name("aboutus");
-Route::get("contact-us", function () {
-    return view("contact");
-})->name("contactus");
+Route::get("contact-us", [SettingController::class, 'contactus'])->name("contactus");
 
 Route::get("order-list", function () {
     return view("order-list");

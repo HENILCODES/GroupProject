@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('settings', function (Blueprint $table) {
             $table->id();
             $table->string('type')->comment('like privacy page content, help page content, configration mail api and site name , logo');
-            $table->string('string')->comment('array formate like : array');
+            $table->string('value')->comment('array formate like : array');
             $table->timestamps();
         });
     }
