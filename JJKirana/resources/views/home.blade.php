@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-    JJKirana - Home
+    - Home
 @endsection
 @section('head')
     <link rel="stylesheet" href="{{ asset('css/home.css') }}" />
@@ -44,9 +44,9 @@
             <ul class="suggest-slider slider-arrow">
                 @forelse ($categorys as $category)
                     <li>
-                        <a class="suggest-card" href="shop-5column.html"><img
+                        <a class="suggest-card" href="{{route('categorys.show',$category['id'])}}"><img
                                 src="{{ asset('storage/images/suggest/' . $category['image']) }}" alt="suggest" />
-                            <h5>{{ $category['name'] }} <span>34 items</span></h5>
+                            <h5>{{ $category['name'] }} <span>{{totalProductItem('category_id',$category['id'])}} items</span></h5>
                         </a>
                     </li>
                 @empty
@@ -70,7 +70,7 @@
                 @forelse ($products as $product)
                     @if ($product['badge'] == 'sale')
                         <div class="col">
-                            <x-products.cards.first badge="{{ $product['badge'] }}" image="{{ $product['image'] }}"
+                            <x-products.cards.first id="{{$product['id']}}" badge="{{ $product['badge'] }}" image="{{ $product['image'] }}"
                                 name="{{ $product['name'] }}" price="{{ $product['price'] }}"
                                 rate="{{ $product['rate'] }}" />
                         </div>
@@ -107,9 +107,8 @@
 
                 @forelse ($products as $product)
                     @if ($product['badge'] == 'feature')
-                        <x-products.cards.second badge="{{ $product['badge'] }}" image="11.jpg" name="Milks"
-                            brand="Ammul" price="250" rate="L" rateValue="2"
-                            description=" Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, natus iure nemo inventore in et aperiam sunt impedit culpa saepe?" />
+                        <x-products.cards.second id="{{$product['id']}}" badge="{{ $product['badge'] }}" image="{{$product['image']}}" name="{{$product['name']}}"
+                            brand="{{$product['brands']}}" price="{{$product['price']}}" rate="{{$product['badge']}}" description="{{$product['description']}}" />
                     @endif
                 @empty
                     <h5>No Features item found</h5>
@@ -148,7 +147,7 @@
                         @forelse ($products as $product)
                             @if ($product['badge'] == 'new')
                                 <li>
-                                    <x-products.cards.first badge="{{ $product['badge'] }}"
+                                    <x-products.cards.first id="{{$product['id']}}" badge="{{ $product['badge'] }}"
                                         image="{{ $product['image'] }}" name="{{ $product['name'] }}"
                                         price="{{ $product['price'] }}" rate="{{ $product['rate'] }}" />
                                 </li>
@@ -186,7 +185,7 @@
             </div>
             <div class="brand-slider slider-arrow">
                 @forelse ($brands as $brand)
-                    <x-brands.card name="{{ $brand['name'] }}" item="25" image="{{ $brand['image'] }}" />
+                    <x-brands.card name="{{ $brand['name'] }}" item="{{totalProductItem('brand_id',$brand['id'])}}" id="{{$brand['id']}}" image="{{ $brand['image'] }}" />
                 @empty
                     <h1>No Brands Found</h1>
                 @endforelse

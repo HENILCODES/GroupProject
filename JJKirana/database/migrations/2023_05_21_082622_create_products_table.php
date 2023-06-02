@@ -17,6 +17,7 @@ return new class extends Migration
             $table->float('price')->comment('price for customer');
             $table->string('rate')->comment('rate store as : 2,KG');
             $table->string('image')->comment('image store as : image1,image2,image3,...');
+            $table->string("badge")->comment("Like : new , sale, feature");
             $table->string('description');
             $table->float('real_price')->comment('product real price for owner');
             $table->integer('category_id');

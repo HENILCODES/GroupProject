@@ -50,16 +50,16 @@
                 <div class="navbar-content">
                     <ul class="navbar-list">
                         <li class="navbar-item dropdown">
-                            <a class="navbar-link" href="index.html">home</a>
+                            <a class="navbar-link" href="{{route("home")}}">home</a>
                         </li>
                         <li class="navbar-item dropdown">
                             <a class="navbar-link" href="about.html">About Us</a>
                         </li>
                         <li class="navbar-item">
-                            <a class="navbar-link" href="all-category.html">categorys</a>
+                            <a class="navbar-link" href="{{route("categorys.index")}}">categorys</a>
                         </li>
                         <li class="navbar-item">
-                            <a class="navbar-link" href="all-category.html">Brands</a>
+                            <a class="navbar-link" href="{{route('brands.index')}}">Brands</a>
                         </li>
                         <li class="navbar-item dropdown">
                             <a class="navbar-link" href="contact.html">Contact Us</a>

@@ -2550,9 +2550,7 @@ tbody tr td:last-child {
   padding-top: 15px;
 }
 .brand-wrap:hover .brand-media::before {
-  border-color: var(--primary);
-  -webkit-animation-play-state: running;
-  animation-play-state: running;
+  box-shadow: -1px -1px 6px 0px #b5b5b5;
 }
 .brand-wrap:hover .brand-overlay {
   -webkit-transform: scale(1);
@@ -2574,7 +2572,6 @@ tbody tr td:last-child {
   height: 175px;
   border-radius: 50%;
   background: var(--white);
-  border: 2px dashed var(--border);
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   -webkit-animation: rotate360 1.2s linear infinite;
@@ -5953,7 +5950,6 @@ tbody tr td:last-child {
   font-size: 38px;
   margin-bottom: 15px;
   color: var(--white);
-  text-transform: uppercase;
 }
 @media (max-width: 767px) {
   .single-banner {
@@ -6059,7 +6055,6 @@ tbody tr td:last-child {
 }
 .bottom-paginate {
   padding-top: 25px;
-  border-top: 1px solid var(--border);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

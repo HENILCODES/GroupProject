@@ -30,6 +30,7 @@
     @endif
 
     @yield('body')
+    
     @if (!request()->is('login') && !request()->is('register') && !request()->is('password/*'))
         <x-master.footer />
     @endif

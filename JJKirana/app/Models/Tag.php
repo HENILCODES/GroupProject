@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class Tag extends Model
 {
     use HasFactory;
+    public $fillable = [
+        'tag','product_id'
+    ];
+    public $table = "tags";
 }
