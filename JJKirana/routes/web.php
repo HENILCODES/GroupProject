@@ -27,6 +27,9 @@ Auth::routes();
 Route::get("about-us", function () {
     return view("about");
 })->name("aboutus");
+Route::get("profile",function(){
+    return view('profile');
+})->name('profile');
 Route::get("contact-us", [SettingController::class, 'contactus'])->name("contactus");
 
 Route::get("order-list", function () {

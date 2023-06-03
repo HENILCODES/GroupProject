@@ -74,7 +74,7 @@
                                 <span class="header-widget navbar-link dropdown-arrow"><img
                                         src="{{ asset('storage/images/user.png') }}" alt="user" /></span>
                                 <ul class="dropdown-position-list">
-                                    <li><a href="profile.html">my profile</a></li>
+                                    <li><a href="{{route('profile')}}">my profile</a></li>
                                     <li><a href="{{route('orderlist')}}">order history</a></li>
                                     <li><a href="wallet.html">my wallet</a></li>
                                     @auth
