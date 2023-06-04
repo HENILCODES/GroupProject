@@ -9,7 +9,7 @@
                         <div class="countdown coming-clock countdown-full-format" data-countdown="{{$endDate}}">
                         </div>
                     </div>
-                    <a href="shop-5column.html" class="btn btn-inline"><i class="fas fa-shopping-basket"></i><span>shop now</span></a>
+                    <a href="{{route('products.index')}}" class="btn btn-inline"><i class="fas fa-shopping-basket"></i><span>shop now</span></a>
                 </div>
             </div>
             <div class="col-lg-1"></div>

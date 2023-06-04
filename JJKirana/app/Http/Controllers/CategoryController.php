@@ -14,7 +14,7 @@ class CategoryController extends Controller
     public function index()
     {
         $categorys = Category::get()->toArray();
-        return view('category',compact("categorys"));
+        return view('category', compact("categorys"));
     }
 
     /**
@@ -38,10 +38,10 @@ class CategoryController extends Controller
      */
     public function show(string $id)
     {
-        $products = Product::where('category_id',$id)->get()->toArray();
+        $products = Product::where('category_id', $id)->get()->toArray();
         $category = getByCategoryId($id);
 
-        return view('product',compact('products','category'));
+        return view('category-single', compact('products', 'category'));
     }
 
     /**
@@ -49,7 +49,6 @@ class CategoryController extends Controller
      */
     public function edit(string $id)
     {
-        
     }
 
     /**

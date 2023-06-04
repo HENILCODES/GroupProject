@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-    - Brands
+    - Category
 @endsection
 @section('head')
     <link rel="stylesheet" href="css/brand-list.css" />
@@ -48,7 +48,7 @@
                 @forelse ($categorys as $category)
                     <x-category.card name="{{ $category['name'] }}"
                         totalProductItem="{{ totalProductItem('category_id', $category['id']) }}"
-                        image="{{ $category['image'] }}" id="{{$category['id']}}"/>
+                        image="{{ $category['image'] }}" id="{{ $category['id'] }}" />
                 @empty
                     <h1>No Data</h1>
                 @endforelse

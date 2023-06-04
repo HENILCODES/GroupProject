@@ -2769,9 +2769,10 @@ figure.snip1195.hover .add-to-cart {
   padding-top: 15px;
 }
 .brand-wrap:hover .brand-media::before {
-  border-color: var(--primary);
+  /* border-color: var(--primary);
   -webkit-animation-play-state: running;
-  animation-play-state: running;
+  animation-play-state: running; */
+  box-shadow: 9px 8px 20px 0px #959595b3;
 }
 .brand-wrap:hover .brand-overlay {
   -webkit-transform: scale(1);
@@ -2793,7 +2794,7 @@ figure.snip1195.hover .add-to-cart {
   height: 175px;
   border-radius: 50%;
   background: var(--white);
-  border: 2px dashed var(--border);
+  /* border: 2px dashed var(--border); */
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   -webkit-animation: rotate360 1.2s linear infinite;

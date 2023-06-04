@@ -1,4 +1,4 @@
-<section class="news-part" style="background: url({{asset("storage/images/newsletter.jpg")}}) no-repeat center">
+<section class="news-part" style="background: url({{ asset('storage/images/newsletter.jpg') }}) no-repeat center">
     <div class="container">
         <div class="row align-items-center">
         </div>
@@ -55,11 +55,11 @@
                     <a class="footer-logo" href="#"><img src="{{ asset('storage/images/logo.png') }}"
                             alt="logo" /></a>
                     <p class="footer-desc">
-                        {{$details->line[0]}}
+                        {{ $details->line[0] }}
                     </p>
                     <ul class="footer-social">
-                        <li><a class="icofont-facebook" href="{{$details->social->facebook}}"></a></li>
-                       
+                        <li><a class="icofont-facebook" href="{{ $details->social->facebook }}"></a></li>
+
                     </ul>
                 </div>
             </div>
@@ -70,18 +70,18 @@
                         <li>
                             <i class="icofont-ui-email"></i>
                             <p>
-                                <span>{{$details->email}}</span>
+                                <span>{{ $details->email }}</span>
                             </p>
                         </li>
                         <li>
                             <i class="icofont-ui-touch-phone"></i>
                             <p>
-                                <span>{{$details->contact}}</span>
+                                <span>{{ $details->contact }}</span>
                             </p>
                         </li>
                         <li>
                             <i class="icofont-location-pin"></i>
-                            <p>{{$details->address}}</p>
+                            <p>{{ $details->address }}</p>
                         </li>
                     </ul>
                 </div>
@@ -91,18 +91,15 @@
                     <h3 class="footer-title">quick Links</h3>
                     <div class="footer-links">
                         <ul>
-                            <li><a href="#">My Account</a></li>
+                            <li><a href="{{ route('profile') }}">My Account</a></li>
                             <li><a href="#">Order History</a></li>
-                            <li><a href="#">Order Tracking</a></li>
+                            <li><a href="{{ route('orderlist') }}">Order Tracking</a></li>
                             <li><a href="#">Best Seller</a></li>
-                            <li><a href="#">New Arrivals</a></li>
                         </ul>
                         <ul>
-                            <li><a href="#">Location</a></li>
-                            <li><a href="#">Affiliates</a></li>
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">Carrer</a></li>
-                            <li><a href="#">Faq</a></li>
+                            <li><a href="{{ route('contactus') }}">Contact</a></li>
+                            <li><a href="">Carrer</a></li>
+                            <li><a href="{{ route('faq') }}">Faq</a></li>
                         </ul>
                     </div>
                 </div>
@@ -111,10 +108,11 @@
                 <div class="footer-widget">
                     <h3 class="footer-title">Download App</h3>
                     <p class="footer-desc">
-                        {{$details->line[1]}}
+                        {{ $details->line[1] }}
                     </p>
                     <div class="footer-app">
-                        <a href="#"><img src="{{asset("storage/images/google-store.png")}}" alt="google" /></a>
+                        <a href="#"><img src="{{ asset('storage/images/google-store.png') }}"
+                                alt="google" /></a>
                     </div>
                 </div>
             </div>

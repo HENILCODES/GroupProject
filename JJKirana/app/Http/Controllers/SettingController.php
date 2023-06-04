@@ -10,6 +10,11 @@ class SettingController extends Controller
     public function contactus()
     {
         $details = getSettingByType('contact');
-        return view('contact-us',compact('details'));
+        return view('contact-us', compact('details'));
+    }
+    public function faq()
+    {
+        $faqs = getSettingByType('faq');
+        return view('faq', compact('faqs'));
     }
 }

@@ -1,34 +1,25 @@
 @extends('layouts.app')
 
 @section('title')
-    Mango
+    - {{ $category['name'] }}
 @endsection
 
-@section('head')
-<link rel="stylesheet" href="{{asset("css/brand-single.css")}}" />
-@endsection
 
 @section('body')
-    <section class="single-banner" style="background: url(/storage/images/single-banner.jpg) no-repeat center">
+    <section class="inner-section single-banner" style="background: url(/storage/images/single-banner.jpg) no-repeat center">
         <div class="container">
-            <h2>{{$brand['name']}}</h2>
+            <h2>{{ $category['name'] }}</h2>
             <ol class="breadcrumb">
                 <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
                 <span class="mx-2 fw-bold text-white">/</span>
-                <li class="breadcrumb-item"><a href="{{ route('brands.index') }}">Brands</a></li>
-                <span class="mx-2 fw-bold text-white">/</span>
-                <li class="breadcrumb-item active" aria-current="page">
-                    Brand
+                <li class="breadcrumb-item active">
+                    <a href="{{ route('categorys.index') }}">Category</a>
                 </li>
+                <span class="mx-2 fw-bold text-white">/</span>
+                <li class="breadcrumb-item active" aria-current="page">{{ $category['name'] }}</li>
             </ol>
         </div>
     </section>
-    <div class="brand-single">
-        <a href="#"><img src="{{ asset('storage/images/brand/'.$brand['image']) }}" alt="brand" /></a><a href="#">
-            <h3>{{$brand['name']}}</h3>
-        </a>
-        <p>({{totalProductItem('brand_id',$brand['id'])}} items)</p>
-    </div>
     <section class="inner-section shop-part">
         <div class="container">
             <div class="row">
@@ -49,16 +40,20 @@
                                 <option value="2">recommend</option>
                             </select>
                         </div>
+                        <div class="filter-action">Filter</div>
                     </div>
                 </div>
             </div>
             <div class="row row-cols-2 row-cols-md-3 row-cols-lg-3 row-cols-xl-5">
+
                 @forelse ($products as $product)
                     <div class="col">
-                    <x-products.cards.first name="{{$product['name']}}" image="{{$product['image']}}" price="{{$product['price']}}" badge="{{$product['badge']}}" rate="{{$product['rate']}}" />
+                        <x-products.cards.first id="{{ $product['id'] }}" badge="{{ $product['badge'] }}"
+                            image="{{ $product['image'] }}" name="{{ $product['name'] }}" price="{{ $product['price'] }}"
+                            rate="{{ $product['rate'] }}" />
                     </div>
                 @empty
-                    <h1>No Data</h1>
+                    <h3>No Data Found</h3>
                 @endforelse
             </div>
             <div class="row">

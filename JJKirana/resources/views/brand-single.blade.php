@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-    Mango
+   - {{$brand['name']}}
 @endsection
 
 @section('head')
