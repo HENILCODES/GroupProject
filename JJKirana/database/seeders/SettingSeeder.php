@@ -34,5 +34,10 @@ class SettingSeeder extends Seeder
             'type'=>'home-promo',
             'value'=>'{"first":"03.jpg","second":"05.jpg"}'
         ]);
+        Setting::create([
+            'id'=>'5',
+            'type'=>'faq',
+            'value'=>'{}'
+        ]);
     }
 }

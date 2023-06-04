@@ -3,6 +3,7 @@
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\BrandController;
+use App\Http\Controllers\Controller;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\SettingController;
 use Illuminate\Support\Facades\Route;
@@ -40,7 +41,9 @@ Route::get("order-list", function () {
     return view("order-list");
 })->name("orderlist");
 
-
+Route::get('checkout',function(){
+    return view('checkout');
+})->name('checkout');
 Route::fallback(function () {
     return redirect()->route('404');
 });
