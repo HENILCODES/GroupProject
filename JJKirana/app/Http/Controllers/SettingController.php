@@ -9,8 +9,7 @@ class SettingController extends Controller
 {
     public function contactus()
     {
-        $settings = Setting::where('type','contactus')->first();
-        $details = json_decode($settings->value);
+        $details = getSettingByType('contact');
         return view('contact-us',compact('details'));
     }
 }

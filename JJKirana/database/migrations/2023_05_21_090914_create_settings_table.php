@@ -2,6 +2,7 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
@@ -14,9 +15,10 @@ return new class extends Migration
         Schema::create('settings', function (Blueprint $table) {
             $table->id();
             $table->string('type')->comment('like privacy page content, help page content, configration mail api and site name , logo');
-            $table->string('value')->comment('array formate like : array');
+            $table->text('value')->comment('array formate like : array');
             $table->timestamps();
         });
+        Artisan::call("db:seed");
     }
 
     /**

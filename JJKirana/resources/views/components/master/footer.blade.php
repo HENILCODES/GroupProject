@@ -48,21 +48,18 @@
 </section>
 <footer class="footer-part">
     <div class="container">
+        @php $details = getSettingByType('contact') @endphp
         <div class="row">
             <div class="col-sm-6 col-xl-3">
                 <div class="footer-widget">
                     <a class="footer-logo" href="#"><img src="{{ asset('storage/images/logo.png') }}"
                             alt="logo" /></a>
                     <p class="footer-desc">
-                        Adipisci asperiores ipsum ipsa repellat consequatur repudiandae
-                        quisquam assumenda dolor perspiciatis sit ipsum dolor amet.
+                        {{$details->line[0]}}
                     </p>
                     <ul class="footer-social">
-                        <li><a class="icofont-facebook" href="#"></a></li>
-                        <li><a class="icofont-twitter" href="#"></a></li>
-                        <li><a class="icofont-linkedin" href="#"></a></li>
-                        <li><a class="icofont-instagram" href="#"></a></li>
-                        <li><a class="icofont-pinterest" href="#"></a></li>
+                        <li><a class="icofont-facebook" href="{{$details->social->facebook}}"></a></li>
+                       
                     </ul>
                 </div>
             </div>
@@ -73,18 +70,18 @@
                         <li>
                             <i class="icofont-ui-email"></i>
                             <p>
-                                <span>support@example.com</span><span>carrer@example.com</span>
+                                <span>{{$details->email}}</span>
                             </p>
                         </li>
                         <li>
                             <i class="icofont-ui-touch-phone"></i>
                             <p>
-                                <span>+91 978878787</span><span>+91 9081808220</span>
+                                <span>{{$details->contact}}</span>
                             </p>
                         </li>
                         <li>
                             <i class="icofont-location-pin"></i>
-                            <p>Ashirwad Socitey Ground Floor Gunajn Vapi</p>
+                            <p>{{$details->address}}</p>
                         </li>
                     </ul>
                 </div>
@@ -114,13 +111,10 @@
                 <div class="footer-widget">
                     <h3 class="footer-title">Download App</h3>
                     <p class="footer-desc">
-                        Lorem ipsum dolor sit amet tenetur dignissimos ipsum eligendi
-                        autem obcaecati minus ducimus totam reprehenderit
-                        exercitationem!
+                        {{$details->line[1]}}
                     </p>
                     <div class="footer-app">
-                        <a href="#"><img src="{{asset("storage/images/google-store.png")}}" alt="google" /></a><a href="#"><img
-                                src="{{asset("storage/images/app-store.png")}}" alt="app" /></a>
+                        <a href="#"><img src="{{asset("storage/images/google-store.png")}}" alt="google" /></a>
                     </div>
                 </div>
             </div>

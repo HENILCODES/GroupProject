@@ -16,13 +16,14 @@
                     <div class="row">
                         <div class="col-sm-6 col-lg-12">
                             <div class="home-grid-promo">
-                                <a href="#"><img src="{{ asset('storage/images/promo/home/01.jpg') }}"
+                                <a href="#"><img src="{{ asset('storage/images/promo/home/' . $homeTopBanner->first) }}"
                                         alt="promo" /></a>
                             </div>
                         </div>
                         <div class="col-sm-6 col-lg-12">
                             <div class="home-grid-promo">
-                                <a href="#"><img src="{{ asset('storage/images/promo/home/02.jpg') }}"
+                                <a href="#"><img
+                                        src="{{ asset('storage/images/promo/home/' . $homeTopBanner->second) }}"
                                         alt="promo" /></a>
                             </div>
                         </div>
@@ -30,8 +31,12 @@
                 </div>
                 <div class="col-lg-8 order-0 order-lg-1 order-xl-1">
                     <div class="home-grid-slider slider-arrow slider-dots">
-                        <a href="#"><img src="{{ asset('storage/images/home/grid/01.jpg') }}" alt="" /></a><a
-                            href="#"><img src="{{ asset('storage/images/home/grid/02.jpg') }}" alt="" /></a>
+                        @forelse ($homeTopBanner->slider as $slider)
+                            <a href="{{ $slider->url }}"><img src="{{ asset('storage/images/home/grid/' . $slider->image) }}"
+                                    alt="{{ $slider->image }}" /></a>
+                        @empty
+                            <h3>No Data Found</h3>
+                        @endforelse
                     </div>
                 </div>
             </div>
@@ -44,9 +49,10 @@
             <ul class="suggest-slider slider-arrow">
                 @forelse ($categorys as $category)
                     <li>
-                        <a class="suggest-card" href="{{route('categorys.show',$category['id'])}}"><img
+                        <a class="suggest-card" href="{{ route('categorys.show', $category['id']) }}"><img
                                 src="{{ asset('storage/images/suggest/' . $category['image']) }}" alt="suggest" />
-                            <h5>{{ $category['name'] }} <span>{{totalProductItem('category_id',$category['id'])}} items</span></h5>
+                            <h5>{{ $category['name'] }} <span>{{ totalProductItem('category_id', $category['id']) }}
+                                    items</span></h5>
                         </a>
                     </li>
                 @empty
@@ -70,9 +76,9 @@
                 @forelse ($products as $product)
                     @if ($product['badge'] == 'sale')
                         <div class="col">
-                            <x-products.cards.first id="{{$product['id']}}" badge="{{ $product['badge'] }}" image="{{ $product['image'] }}"
-                                name="{{ $product['name'] }}" price="{{ $product['price'] }}"
-                                rate="{{ $product['rate'] }}" />
+                            <x-products.cards.first id="{{ $product['id'] }}" badge="{{ $product['badge'] }}"
+                                image="{{ $product['image'] }}" name="{{ $product['name'] }}"
+                                price="{{ $product['price'] }}" rate="{{ $product['rate'] }}" />
                         </div>
                     @endif
                 @empty
@@ -90,7 +96,7 @@
         </div>
     </section>
     {{-- ad banner --}}
-    <x-home.promoCard image="03.jpg" />
+    <x-home.promoCard image="{{ $homePromo->first }}" />
 
 
     {{-- features item --}}
@@ -107,8 +113,10 @@
 
                 @forelse ($products as $product)
                     @if ($product['badge'] == 'feature')
-                        <x-products.cards.second id="{{$product['id']}}" badge="{{ $product['badge'] }}" image="{{$product['image']}}" name="{{$product['name']}}"
-                            brand="{{$product['brands']}}" price="{{$product['price']}}" rate="{{$product['badge']}}" description="{{$product['description']}}" />
+                        <x-products.cards.second id="{{ $product['id'] }}" badge="{{ $product['badge'] }}"
+                            image="{{ $product['image'] }}" name="{{ $product['name'] }}"
+                            brand="{{ $product['brands'] }}" price="{{ $product['price'] }}"
+                            rate="{{ $product['badge'] }}" description="{{ $product['description'] }}" />
                     @endif
                 @empty
                     <h5>No Features item found</h5>
@@ -126,9 +134,9 @@
     </section>
 
 
-    <x-home.countDownOffer title="special discount offer for vegetable items"
-        description="Reprehenderit sed quod autem molestiae aut modi minus" endDate="2023/10/18" offer="20%"
-        image="countdown.png" />
+    <x-home.countDownOffer title="{{ $homeCountDownOffer->title }}" description="{{ $homeCountDownOffer->description }}"
+        endDate="{{ $homeCountDownOffer->endDate }}" offer="{{ $homeCountDownOffer->offer }}"
+        image="{{ $homeCountDownOffer->image }}" />
 
 
     {{-- new product list --}}
@@ -147,7 +155,7 @@
                         @forelse ($products as $product)
                             @if ($product['badge'] == 'new')
                                 <li>
-                                    <x-products.cards.first id="{{$product['id']}}" badge="{{ $product['badge'] }}"
+                                    <x-products.cards.first id="{{ $product['id'] }}" badge="{{ $product['badge'] }}"
                                         image="{{ $product['image'] }}" name="{{ $product['name'] }}"
                                         price="{{ $product['price'] }}" rate="{{ $product['rate'] }}" />
                                 </li>
@@ -171,7 +179,7 @@
 
 
     {{-- promo card --}}
-    <x-home.promoCard image="05.jpg" />
+    <x-home.promoCard image="{{ $homePromo->second }}" />
 
     {{-- brands list --}}
     <section class="section brand-part">
@@ -185,7 +193,8 @@
             </div>
             <div class="brand-slider slider-arrow">
                 @forelse ($brands as $brand)
-                    <x-brands.card name="{{ $brand['name'] }}" item="{{totalProductItem('brand_id',$brand['id'])}}" id="{{$brand['id']}}" image="{{ $brand['image'] }}" />
+                    <x-brands.card name="{{ $brand['name'] }}" item="{{ totalProductItem('brand_id', $brand['id']) }}"
+                        id="{{ $brand['id'] }}" image="{{ $brand['image'] }}" />
                 @empty
                     <h1>No Brands Found</h1>
                 @endforelse

@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\Brand;
 use App\Models\Category;
 use App\Models\Product;
-use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
@@ -16,7 +15,6 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        
     }
 
     /**
@@ -28,12 +26,12 @@ class HomeController extends Controller
     {
         $categorys = Category::get()->toArray();
         $brands = Brand::get()->toArray();
-        $products = Product::select('products.*','brands.name as brands','categorys.name as categorys')->leftjoin('brands','brands.id','products.brand_id')->leftjoin('categorys','categorys.id','products.id')->orderBy('products.id','asc')->get()->toArray();
+        $products = Product::select('products.*', 'brands.name as brands', 'categorys.name as categorys')->leftjoin('brands', 'brands.id', 'products.brand_id')->leftjoin('categorys', 'categorys.id', 'products.id')->orderBy('products.id', 'asc')->get()->toArray();
 
-        // $feature = $products->where('products.badge','feature')->get()->toArray();
-        // $new = $products->where('products.badge','new')->get()->toArray();
-        // $sale = $products->where('products.badge','sale')->get()->toArray();
-        // dd($feature);
-        return view('home',compact('categorys','brands','products'));
+        $homeTopBanner = getSettingByType('home-top-banner');
+        $homeCountDownOffer = getSettingByType('home-countdown-offer');
+        $homePromo = getSettingByType('home-promo');
+
+        return view('home', compact('categorys', 'brands', 'products', 'homeTopBanner', "homeCountDownOffer", "homePromo"));
     }
 }
