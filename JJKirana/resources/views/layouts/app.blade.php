@@ -27,6 +27,7 @@
         <x-master.desktop />
         <x-products.carts.slider />
         <x-master.mobile />
+        <x-master.mobile-category />
     @endif
 
     @yield('body')

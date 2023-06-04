@@ -21,10 +21,10 @@
             <div class="header-media-group">
                 <button class="header-user">
                     <img src="{{ asset('storage/images/user.png') }}" alt="user" /></button>
-                <a href="index.html"><img src="{{ asset('storage/images/logo.png') }}" alt="logo" /></a>
+                <a href="{{route('home')}}"><img src="{{ asset('storage/images/logo.png') }}" alt="logo" /></a>
                 <button class="header-src"><i class="fas fa-search"></i></button>
             </div>
-            <a href="index.html" class="header-logo"><img src="{{ asset('storage/images/logo.png') }}"
+            <a href="{{route('home')}}" class="header-logo"><img src="{{ asset('storage/images/logo.png') }}"
                     alt="logo" /></a>
             <form class="header-form">
                 <input type="text" placeholder="Search anything..." />

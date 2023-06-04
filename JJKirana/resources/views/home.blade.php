@@ -16,7 +16,8 @@
                     <div class="row">
                         <div class="col-sm-6 col-lg-12">
                             <div class="home-grid-promo">
-                                <a href="#"><img src="{{ asset('storage/images/promo/home/' . $homeTopBanner->first) }}"
+                                <a href="#"><img
+                                        src="{{ asset('storage/images/promo/home/' . $homeTopBanner->first) }}"
                                         alt="promo" /></a>
                             </div>
                         </div>
@@ -32,7 +33,8 @@
                 <div class="col-lg-8 order-0 order-lg-1 order-xl-1">
                     <div class="home-grid-slider slider-arrow slider-dots">
                         @forelse ($homeTopBanner->slider as $slider)
-                            <a href="{{ $slider->url }}"><img src="{{ asset('storage/images/home/grid/' . $slider->image) }}"
+                            <a href="{{ $slider->url }}"><img
+                                    src="{{ asset('storage/images/home/grid/' . $slider->image) }}"
                                     alt="{{ $slider->image }}" /></a>
                         @empty
                             <h3>No Data Found</h3>
@@ -116,7 +118,7 @@
                         <x-products.cards.second id="{{ $product['id'] }}" badge="{{ $product['badge'] }}"
                             image="{{ $product['image'] }}" name="{{ $product['name'] }}"
                             brand="{{ $product['brands'] }}" price="{{ $product['price'] }}"
-                            rate="{{ $product['badge'] }}" description="{{ $product['description'] }}" />
+                            rate="{{ $product['rate'] }}" description="{{ $product['description'] }}" />
                     @endif
                 @empty
                     <h5>No Features item found</h5>

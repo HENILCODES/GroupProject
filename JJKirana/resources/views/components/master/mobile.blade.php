@@ -48,14 +48,14 @@
 
 {{-- mobile bottom nav bar --}}
 <div class="mobile-menu">
+    <a href="{{route('home')}}" title="Home Page"><i class="fas fa-home fs-4"></i><span>Home</span></a>
+
     <button class="cate-btn" title="Category List"><i class="bi bi-tags-fill fs-4"></i><span>category</span></button>
 
+    <button class="cart-btn" title="Cartlist"><i class="bi bi-bag-check-fill fs-4"></i><span>cartlist</span><sup>9+</sup></button>
+    
     <a href="wishlist.html" title="Wishlist"><i class="bi bi-heart-fill fs-4"></i><span>wishlist</span><sup>0</sup></a>
 
-    <button class="cart-btn" title="Cartlist"><i
-            class="bi bi-bag-check-fill fs-4"></i><span>cartlist</span><sup>9+</sup></button>
+    <a href="{{route("orderlist")}}" title="Order List"><i class="bi bi-cart-check-fill fs-4"></i><span>Order</span></a>
 
-    <a href="#" title="Order List"><i class="bi bi-cart-check-fill fs-4"></i><span>Order</span></a>
-
-    <a href="#" title="Order History"><i class="fas fa-history fs-2"></i><span>History</span></a>
 </div>

@@ -2,7 +2,7 @@
     <div class="feature-card">
         <div class="feature-media">
             <div class="feature-label">
-                <label class="label-text feature">{{$badge}}</label>
+                <label class="label-text {{$badge}}">{{$badge}}</label>
             </div>
             <button class="feature-wish wish">
                 <i class="fas fa-heart"></i></button><a class="feature-image" href="{{route("products.show",$id)}}"><img

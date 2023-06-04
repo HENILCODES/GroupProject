@@ -39,7 +39,8 @@ class ProductController extends Controller
      */
     public function show(string $id)
     {
-        $product = Product::where('id', $id)->get()->toArray();
+        $product = Product::where('id', $id)->first()->toArray();
+        // dd($product);
         if ($product) {
             $brand = getByBrandId($product['brand_id']);
             $tags = Tag::where('product_id', $id)->get()->first();

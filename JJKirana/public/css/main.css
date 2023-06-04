@@ -1818,7 +1818,7 @@ figure.snip1195.hover .add-to-cart {
 .label-text.sale {
   background: var(--orange);
 }
-.label-text.feat {
+.label-text.feature{
   background: var(--purple);
 }
 .label-text.rate {
@@ -2079,7 +2079,7 @@ figure.snip1195.hover .add-to-cart {
 .label-text.sale {
   background: var(--orange);
 }
-.label-text.feat {
+.label-text.feature{
   background: var(--purple);
 }
 .label-text.rate {
@@ -2316,7 +2316,7 @@ figure.snip1195.hover .add-to-cart {
 .standard-label.sale {
   background: var(--orange);
 }
-.standard-label.feat {
+.standard-label.feature{
   background: var(--purple);
 }
 .standard-label.rate {
@@ -4979,7 +4979,7 @@ figure.snip1195.hover .add-to-cart {
 .view-label.sale {
   background: var(--orange);
 }
-.view-label.feat {
+.view-label.feature{
   background: var(--purple);
 }
 .view-label.rate {
