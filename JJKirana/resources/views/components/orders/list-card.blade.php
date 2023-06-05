@@ -25,7 +25,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-lg-5">
+            <div class="col-lg-4">
                 <ul class="orderlist-details">
                     <li>
                         <h6>order id</h6>
@@ -65,23 +65,22 @@
                     </li>
                 </ul>
             </div>
-            <div class="col-lg-3">
+            <div class="col-lg-4">
                 <div class="orderlist-deliver">
                     <h6>Delivery location</h6>
-                    <p>
+                    <p class="bottom-0">
                         502, Golden Height, Sagar Samrath Road, khariwad, Nani
                         Daman, Daman-396210
                     </p>
                 </div>
             </div>
-            <div class="p-2">
-                <div class="new-slider slider-arrow">
-                    <x-products.cards.third id="0"/>
-                    <x-products.cards.third id="0"/>
-                    <x-products.cards.third id="0"/>
-                    <x-products.cards.third id="0"/>
-                    <x-products.cards.third id="0"/>
-                    <x-products.cards.third id="0"/>
+            <div class="col-lg-12">
+                <div class="row">
+                    <div class="new-slider slider-arrow">
+                        <x-products.cards.third id="0" />
+                        <x-products.cards.third id="0" />
+                        <x-products.cards.third id="0" />
+                    </div>
                 </div>
             </div>
         </div>

@@ -100,7 +100,7 @@
                         <div class="account-content">
                             <div class="row">
                                 <div class="col-md-6 col-lg-4 alert fade show">
-                                    <div class="profile-card address active">
+                                    <div class="profile-card address">
                                         <h6>Contact No :-</h6>
                                         <p>+91 xxxxxxxxxx</p>
                                         <ul class="user-action">

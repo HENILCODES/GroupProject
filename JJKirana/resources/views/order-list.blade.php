@@ -22,7 +22,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="orderlist-filter">
-                        <h5>total order <span>- (4)</span></h5>
+                        <h5>total order <span>- (3)</span></h5>
                         <div class="filter-short">
                             <label class="form-label">short by:</label><select class="form-select">
                                 <option value="all" selected>all order</option>

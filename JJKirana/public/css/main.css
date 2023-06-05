@@ -3389,6 +3389,7 @@ figure.snip1195.hover .add-to-cart {
   -moz-transition: all linear 0.3s;
   -ms-transition: all linear 0.3s;
   -o-transition: all linear 0.3s;
+  height: 280px;
 }
 .contact-card:hover {
   background: var(--primary);

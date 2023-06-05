@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title')
-   - Profile
+    - Profile
 @endsection
 
 @section('head')
@@ -33,7 +33,8 @@
                             <div class="row">
                                 <div class="col-lg-2">
                                     <div class="profile-image">
-                                        <a href="#"><img src="{{asset("storage/images/user.png")}}" alt="user" /></a>
+                                        <a href="#"><img src="{{ asset('storage/images/user.png') }}"
+                                                alt="user" /></a>
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-lg-4">
@@ -57,6 +58,39 @@
                         </div>
                     </div>
                 </div>
+                <div class="modal fade" id="profile-edit">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <button class="modal-close" data-bs-dismiss="modal">
+                                <i class="icofont-close"></i>
+                            </button>
+                            <form class="modal-form">
+                                <h1 class="text-center">Details</h1>
+                                <div class="col-lg-12 row">
+                                    <div class="col-sm-12 col-md-12 col-lg-6">
+                                        <div class="form-group mb-1">
+                                            <label class="form-label">Name</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input class="form-control"
+                                                type="text" value="Miron Mahmud" />
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-12 col-md-12 col-lg-6">
+                                        <div class="form-group mb-1">
+                                            <label class="form-label">Email</label>
+                                        </div>
+                                        <div class="form-group">
+                                            <input class="form-control"
+                                                type="email" value="JJ Kirana@gmail.com" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <button class="form-btn" type="submit">save Details</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
                 <div class="col-lg-12">
                     <div class="account-card">
                         <div class="account-title">
@@ -68,10 +102,10 @@
                         <div class="account-content">
                             <div class="row">
                                 <div class="col-md-6 col-lg-4 alert fade show">
-                                    <div class="profile-card address active">
+                                    <div class="profile-card address">
                                         <h6>Contact No :-</h6>
                                         <p>+91 xxxxxxxxxx</p>
-                                        <ul class="user-action">
+                                        {{-- <ul class="user-action">
                                             <li>
                                                 <button class="edit icofont-edit" title="Edit This" data-bs-toggle="modal"
                                                     data-bs-target="#address-edit"></button>
@@ -80,14 +114,14 @@
                                                 <button class="trash icofont-ui-delete" title="Remove This"
                                                     data-bs-dismiss="alert"></button>
                                             </li>
-                                        </ul>
+                                        </ul> --}}
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-lg-4 alert fade show">
                                     <div class="profile-card address">
                                         <h6>Address :-</h6>
                                         <p>204,baban chinese hotel,khariwad, nani daman</p>
-                                        <ul class="user-action">
+                                        {{-- <ul class="user-action">
                                             <li>
                                                 <button class="edit icofont-edit" title="Edit This" data-bs-toggle="modal"
                                                     data-bs-target="#address-edit"></button>
@@ -96,14 +130,14 @@
                                                 <button class="trash icofont-ui-delete" title="Remove This"
                                                     data-bs-dismiss="alert"></button>
                                             </li>
-                                        </ul>
+                                        </ul> --}}
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-lg-4 alert fade show">
                                     <div class="profile-card address">
                                         <h6>Email ID :-</h6>
                                         <p>test@test.com</p>
-                                        <ul class="user-action">
+                                        {{-- <ul class="user-action">
                                             <li>
                                                 <button class="edit icofont-edit" title="Edit This" data-bs-toggle="modal"
                                                     data-bs-target="#address-edit"></button>
@@ -112,7 +146,7 @@
                                                 <button class="trash icofont-ui-delete" title="Remove This"
                                                     data-bs-dismiss="alert"></button>
                                             </li>
-                                        </ul>
+                                        </ul> --}}
                                     </div>
                                 </div>
                             </div>
@@ -133,7 +167,7 @@
                     <div class="col-lg-12 row">
                         <div class="col-sm-12 col-md-12 col-lg-6">
                             <div class="form-title mt-2">
-                                <h3>edit contact</h3>
+                                <h3>Add contact</h3>
                             </div>
                             <div class="form-group">
                                 <label class="form-label">title</label><select class="form-select">
@@ -148,7 +182,7 @@
                         </div>
                         <div class="col-sm-12 col-md-12 col-lg-6">
                             <div class="form-title mt-2">
-                                <h3>edit Email</h3>
+                                <h3>Add Email</h3>
                             </div>
                             <div class="form-group">
                                 <label class="form-label">title</label><select class="form-select">

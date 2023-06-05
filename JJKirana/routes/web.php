@@ -30,18 +30,18 @@ Route::get("about-us", function () {
     return view("about");
 })->name("aboutus");
 
-Route::get("profile",function(){
+Route::get("profile", function () {
     return view('profile');
 })->name('profile');
 
-Route::get("faq", [SettingController::class,'faq'])->name("faq");
+Route::get("faq", [SettingController::class, 'faq'])->name("faq");
 Route::get("contact-us", [SettingController::class, 'contactus'])->name("contactus");
 
 Route::get("order-list", function () {
     return view("order-list");
 })->name("orderlist");
 
-Route::get('checkout',function(){
+Route::get('checkout', function () {
     return view('checkout');
 })->name('checkout');
 Route::fallback(function () {
