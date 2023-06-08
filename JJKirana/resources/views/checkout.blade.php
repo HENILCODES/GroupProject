@@ -39,13 +39,11 @@
                         <div class="account-content">
                             <div class="col-lg-12">
                                 <div class="row">
-                                    <div class="col-lg-4">
+                                    <div class="blog-slider slider-arrow">
                                         <x-products.cards.third id="0" />
-                                    </div>
-                                    <div class="col-lg-4">
                                         <x-products.cards.third id="1" />
-                                    </div>
-                                    <div class="col-lg-4">
+                                        <x-products.cards.third id="2" />
+                                        <x-products.cards.third id="2" />
                                         <x-products.cards.third id="2" />
                                     </div>
                                 </div>
