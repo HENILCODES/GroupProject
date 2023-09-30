@@ -70,21 +70,21 @@ $(window).on("scroll", function () {
   $(".wish").on("click", function () {
     $(this).toggleClass("active");
   }),
-  $(".product-add").on("click", function () {
-    var e = $(this).next(".product-action");
-    $(this).hide(), e.css("display", "flex");
-  }),
-  $(".action-plus").on("click", function () {
-    var e = $(this).closest(".product-action").children(".action-input").get(0)
-        .value++,
-      c = $(this).closest(".product-action").children(".action-minus");
-    e > 0 && c.removeAttr("disabled");
-  }),
-  $(".action-minus").on("click", function () {
-    2 ==
-      $(this).closest(".product-action").children(".action-input").get(0)
-        .value-- && $(this).attr("disabled", "disabled");
-  }),
+  // $(".product-add").on("click", function () {
+  //   var e = $(this).next(".product-action");
+  //   $(this).hide(), e.css("display", "flex");
+  // }),
+  // $(".action-plus").on("click", function () {
+  //   var e = $(this).closest(".product-action").children(".action-input").get(0)
+  //       .value++,
+  //     c = $(this).closest(".product-action").children(".action-minus");
+  //   e > 0 && c.removeAttr("disabled");
+  // }),
+  // $(".action-minus").on("click", function () {
+  //   2 ==
+  //     $(this).closest(".product-action").children(".action-input").get(0)
+  //       .value-- && $(this).attr("disabled", "disabled");
+  // }),
   $(".review-widget-btn").on("click", function () {
     $(this).next(".review-widget-list").toggle();
   }),
@@ -110,5 +110,3 @@ $(window).on("scroll", function () {
     $(".payment-card.payment").removeClass("active"),
       $(this).addClass("active");
   });
-
-/* <-------------------------------------- New Code ---------------------------------------> */
